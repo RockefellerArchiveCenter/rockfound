@@ -13,9 +13,7 @@
     
     <link href='//fonts.googleapis.com/css?family=Oswald:400,700,300|Playfair+Display' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    <!--<link href="$css_folder/vendor/animate.min.css" media="all" rel="stylesheet" type="text/css" >-->
-    
+    <link href="$css_folder/vendor/animate.min.css" media="all" rel="stylesheet" type="text/css" >
     <link rel="shortcut icon" href="$images_folder/favicon.png">
     <link rel="apple-touch-icon" href="$images_folder/apple-touch-icon.png">
   

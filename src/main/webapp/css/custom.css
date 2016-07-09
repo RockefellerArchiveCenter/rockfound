@@ -2,7 +2,13 @@
 
 /*$top-color: #2c2c2c;*/
 
-
+@media (max-width:767px) {
+    #mobile-nav {
+        background-color:#fff;
+        width: 50%;
+        min-width: 160px;
+    }
+}
 
 
 /*---------------- Dropdown CSS----------------*/
@@ -266,11 +272,13 @@ body {
 }
 
 #header-list{
-    width:427.5px;
+   /* width:427.5px; */
     list-style-type:none;
     display:inline;
     li{
         float:left;
+        line-height: 2em;
+        padding-left: 8px;
     }
 }
 

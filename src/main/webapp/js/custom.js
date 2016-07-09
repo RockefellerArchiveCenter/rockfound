@@ -1,7 +1,7 @@
 /*Function to have the menu button drop down and slideup the mobile menu */
 $(document).ready(function(){
 
-    $("#nav-trigger span").click(function(){
+   $("#nav-trigger span").click(function(){
         $("ul.mobile-nav-menu").toggle("fast" );
     }); 
 });
