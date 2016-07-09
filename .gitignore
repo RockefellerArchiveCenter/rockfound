@@ -1,0 +1,14 @@
+.DS_Store
+*.bak
+*.iml
+*.ipr
+*.iws
+*.swp
+.idea
+build
+.gradle
+/dist
+.ivy
+
+target
+/*/target
