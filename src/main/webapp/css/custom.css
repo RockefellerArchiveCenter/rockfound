@@ -1,7 +1,5 @@
 @import "//fonts.googleapis.com/css?family=Roboto:300,400,500,700";
 
-/*$top-color: #2c2c2c;*/
-
 @media (max-width:767px) {
     #mobile-nav {
         background-color:#fff;
@@ -9,8 +7,6 @@
         min-width: 160px;
     }
 }
-
-
 /*---------------- Dropdown CSS----------------*/
 
 .dropdown {
@@ -26,12 +22,17 @@
     z-index: 1;
 }
 
+.dropdown-content-sub {
+    display: none;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
-
 
 /*-------navigation/header css ---------*/
 
@@ -64,7 +65,7 @@
     text-align: center;
     text-decoration: none;
 a {
-    color:#777;
+    color:#777 ;
     padding: 15px 30px;
     text-align: center;
 }
@@ -93,50 +94,95 @@ a {
     margin: 0;
 }
 
+
+.grandchild-menu {
+           display:none;
+		right:-162px !important;
+		top:0px !important;
+	}
+
+
+#breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 50px 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.aui .breadcrumb {
+    padding: 8px 15px;
+    margin: 10px 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+
 #navigation {
     background-color: #f8f8f8;
     margin:auto;
     /*min-height: 60px;*/
-ul {
-    list-style-type: none;
-li {
-    float: left;
-    height: 100%;
-a {
-    display: block;
-    margin: 0;
-    padding: 13px;
-    color: #777;
-    text-align: center;
-    text-decoration: none;
-    height: 100%;
-    min-height: 20px;
-}
-a:hover {
-    background-color: #e8e8e8;
-}
-ul {
-    min-width: 162px;
-    margin: 0;
-li {
-    width: 100%;
-    max-width:162px;
-    background-color:#fff;
-    /*background-color: #807943;*/
-}
-}
-}
-}
-}
+        ul {
+        list-style-type: none;
+                li {
+                    float: left;
+                    height: 100%;
+                            a{
+                                    display: block;
+                                    margin: 0;
+                                    padding: 13px;
+                                    color: #777;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    height: 100%;
+                                    min-height: 20px;
+                            }
+                            a:hover {
+                                    background-color: #e8e8e8;
+
+                                    }
+                            ul {
+                            min-width: 162px;
+                             margin: 0;
+                                    li {
+                                    width: 100%;
+                                    max-width:162px;
+                                    background-color:#fff;
+                                    height:inherit;
+                                    /*background-color: #807943;*/
+                                    }
+                                    ul{
+                                        li{
+                                            a{
+                                                padding:5 px;
+                                            }
+                                        }
+                                    }
 
 
+                                }
 
+
+                    }
+
+         }
+
+}
 
 /* defining the bootstrap things that bootstrap 3 has but 2 does not */
 @media (min-width: 1200px) {
     #content {
         width: 1170px;
+
     }
+    aui .row {
+        margin-left: -40px;
+        margin-right: -26px;
+    }
+
 }
 @media (min-width: 992px) {
     #content {
@@ -148,6 +194,8 @@ li {
         width: 750px;
     }
 }
+
+
 
 body {
     height: 100%;
@@ -165,7 +213,7 @@ body {
 
 #content{
     margin:auto;
-    width:80%
+    width:75%
 
 }
 
@@ -182,6 +230,17 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.aui .lfr-admin-panel {
+    background-color: #FFF;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1100;
 }
 
 
@@ -217,13 +276,12 @@ body {
     width: 100%;
 }
 
-.aui .container {
+.container {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
-
 
 
 .landing {
@@ -253,17 +311,6 @@ body {
     color: #212121;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /*Top bar*/
 
 #wrapper{
@@ -272,13 +319,11 @@ body {
 }
 
 #header-list{
-   /* width:427.5px; */
+    width:427.5px;
     list-style-type:none;
     display:inline;
     li{
         float:left;
-        line-height: 2em;
-        padding-left: 8px;
     }
 }
 
@@ -560,6 +605,56 @@ body {
     display: none;
 }
 
+/*Navigation Css*/
+
+.nav-menu-style-{
+background-color: #434A54;
+    color: #f5f7fa;
+position: relative;
+    display: block;
+    padding: 10px 15px;
+     a {
+        color: #f5f7fa;
+        position: relative;
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            background-color: transparent;
+    }
+
+a:hover {
+    text-decoration: none;
+    background-color: #eee;
+    color: #434A54;
+}
+}
+
+.aui ul, .aui ol {
+    padding: 0;
+    margin: 0 0 10px 25px;
+    list-style-type: none !important;
+}
+
+/*font awesome*/
+
+.fa-angle-double-right:before {
+    content: "\f101";
+    color: #801721;
+    font-size: 40px;
+    padding-left: 250px;
+}
+.exhibit-content .fa-angle-double-right {
+    color: #801721;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 42px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 /*Search Results*/
 
@@ -663,6 +758,7 @@ hgroup h2.lead {
 }
 
 
+
 /*footer*/
 
 footer {
@@ -674,6 +770,9 @@ footer {
 
 footer .logo {
     float: right;
+    position:relative;
+    right:190px;
+    top:-65px;
 }
 
 
@@ -753,6 +852,48 @@ nav#admin-bar li {
     /*font-family: $sans-serif-fonts;*/
 }
 
+.aui .carousel-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 50px;
+    background: #333;
+    background: rgba(0,0,0,0.75);
+}
+.carousel menu {
+    background: #000;
+    bottom: 6px;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+    right: 6px;
+    z-index: 4;
+    border-radius: 5px;
+}
+
+#para1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 250px;
+    background: #333;
+    background: rgba(0,0,0,0.75);
+    color:white
+
+}
+
+.aui img {
+    max-width: 100%;
+    width: auto\9;
+    height: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
 .sidebar-histories {
     background-color: #434A54;
     color: #f5f7fa;
@@ -784,4 +925,3 @@ nav#admin-bar li {
     font-size: 14px;
     line-height: 1.8em;
 }
-

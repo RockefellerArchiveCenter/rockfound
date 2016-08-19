@@ -2,38 +2,63 @@
 
     #parse ($init)
 
+
 <html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
 
 <head>
 
+    <meta charset="utf-8">
     <title>$the_title - $company_name</title>
     <meta content="initial-scale=1.0, width=device-width" name="viewport" />
-    
-    $theme.include($top_head_include) 
-    
-    <link href='//fonts.googleapis.com/css?family=Oswald:400,700,300|Playfair+Display' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="$css_folder/vendor/animate.min.css" media="all" rel="stylesheet" type="text/css" >
     <link rel="shortcut icon" href="$images_folder/favicon.png">
     <link rel="apple-touch-icon" href="$images_folder/apple-touch-icon.png">
-  
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+     <script type="text/javascript" src="$javascript_folder/scripts.js"></script>
+     <script type="text/javascript" src="$javascript_folder/custom.js"></script>
+     <link href="$css_folder/vendor/animate.min.css" media="all" rel="stylesheet" type="text/css" >
+     <link href="$css_folder/main.css" media="all" rel="stylesheet" type="text/css" >
+
+      <link href='//fonts.googleapis.com/css?family=Oswald:400,700,300|Playfair+Display' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+      <script type="text/javascript" src="http://staging.rockefeller100.org/application/views/scripts/javascripts/vendor/modernizr.js"></script>
+      <script type="text/javascript" src="http://staging.rockefeller100.org/themes/rockefeller/javascripts/scripts.js"></script>
+
+      <script type="text/javascript" src="$javascript_folder/custom.js"></script>
+
+
+    <style>
+            #if ($is_signed_in)
+            .portlet-title h1, .portlet-title span {
+                display:inline;
+            }
+            #else
+            .portlet-title h1, .portlet-title span {
+                display:none;
+            }
+            #end
+    </style>
+
+    $theme.include($top_head_include)
 
 </head>
 
 <body class="$css_class">
 
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
     $theme.include($body_top_include)
 
     #if ($is_signed_in)
-        #dockbar()    
+        #dockbar()
     #end
 
-<div class="container-fluid" id="wrapper">              
-    <header id="header-full-top" class="header-full">    <!-- Header starts -->
+<div class="container-fluid" id="wrapper">
+    <header id="header-full-top" class="header-full">
 
-        <div class="top-bar hidden-xs" id = "header-top">            
+        <div class="top-bar hidden-xs" id = "header-top">
             <div class="container">
-                <ul class="topbar-nav list-unstyled list-inline pull-left">    <!-- Header title left -->
+                <ul class="topbar-nav list-unstyled list-inline pull-left">
                     <li>
                         <div class="header-full-title">
                             <h1 class="animated fadeInRight">
@@ -42,7 +67,7 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="topbar-nav list-unstyled list-inline pull-right" id = "header-list">    <!-- Header title right -->
+                <ul class="topbar-nav list-unstyled list-inline pull-right" id = "header-list">
                     <li><a href="/items"><i class="fa fa-book"></i> Digital Library</a></li>
                     <li><a href="/biographical"><i class="fa fa-user"></i> People</a></li>
                     <li><div id="custom-search-input">
@@ -89,16 +114,16 @@
                 #end
             </div>
         </div>
-    </header>   <!-- Header ends -->
+    </header>
 </div>
 
-<div id="content" class="container-fluid">   <!--for breadcrumbs-->
-    ##<nav id="breadcrumbs">#breadcrumbs()</nav>
+<div id="content" class = "container-fluid">
+    <nav id="breadcrumbs" class = "span12 offset1" >#breadcrumbs()</nav>
 
-    #if ($selectable)  <!--for logging in-->
+    #if ($selectable)
         $theme.include($content_include)
     #else
-        $portletDisplay.recycle()   <!--resetting the variables-->
+        $portletDisplay.recycle()
 
         $portletDisplay.setTitle($the_title)
 
@@ -111,7 +136,7 @@
         <div class="row-fluid">
             <div class="col-lg-6">
                 <p><span class="copyright">This project was generously funded by the&nbsp;<a title="rockefellerfoundation.org" href="http://www.rockefellerfoundation.org/" target="_blank">Rockefeller Foundation</a>.</span></p>
-                <p><span class="copyright">Copyright &copy; <a title="Rockefeller Archive Center" href="http://rockarch.org" target="_blank">The Rockefeller Archive Center</a>. All rights reserved.<br /></span></p>            </div>
+                <p><span class="copyright">Copyright &copy; <a title="Rockefeller Archive Center" href="http://rockarch.org" target="_blank">The Rockefeller Archive Center</a>. All rights reserved.<br /></span></p>  </div>
             <div class="col-lg-6">
                 <a href="http://www.rockarch.org/">
                     <img src="$images_folder/footer_logo2.jpg" class="logo" alt="footer logo" />
@@ -125,12 +150,9 @@
 
     $theme.include($bottom_include)
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js" integrity="sha384-vOWIrgFbxIPzY09VArRHMsxned7WiY6hzIPtAIIeTFuii9y3Cr6HE6fcHXy5CFhc" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://staging.rockefeller100.org/application/views/scripts/javascripts/vendor/modernizr.js"></script>
-    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript" src="$javascript_folder/scripts.js"></script>
-    <script type="text/javascript" src="$javascript_folder/custom.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js" integrity="sha384-vOWIrgFbxIPzY09VArRHMsxned7WiY6hzIPtAIIeTFuii9y3Cr6HE6fcHXy5CFhc" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
 
