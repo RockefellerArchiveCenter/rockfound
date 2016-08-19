@@ -16,7 +16,30 @@
     <link href="$css_folder/vendor/animate.min.css" media="all" rel="stylesheet" type="text/css" >
     <link rel="shortcut icon" href="$images_folder/favicon.png">
     <link rel="apple-touch-icon" href="$images_folder/apple-touch-icon.png">
-  
+	
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+     <script type="text/javascript" src="$javascript_folder/scripts.js"></script>
+     <script type="text/javascript" src="$javascript_folder/custom.js"></script>
+     <link href="$css_folder/main.css" media="all" rel="stylesheet" type="text/css" >
+
+      <link href='//fonts.googleapis.com/css?family=Oswald:400,700,300|Playfair+Display' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+      <script type="text/javascript" src="http://staging.rockefeller100.org/application/views/scripts/javascripts/vendor/modernizr.js"></script>
+      <script type="text/javascript" src="http://staging.rockefeller100.org/themes/rockefeller/javascripts/scripts.js"></script>
+
+	  <style>
+            #if ($is_signed_in)
+            .portlet-title h1, .portlet-title span {
+                display:inline;
+            }
+            #else
+            .portlet-title h1, .portlet-title span {
+                display:none;
+            }
+            #end
+    </style>
+
 
 </head>
 
