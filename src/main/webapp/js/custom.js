@@ -1,10 +1,39 @@
 /*Function to have the menu button drop down and slideup the mobile menu */
 $(document).ready(function(){
 
-   $("#nav-trigger span").click(function(){
+    $("#nav-trigger span").click(function(){
         $("ul.mobile-nav-menu").toggle("fast" );
-    }); 
+    });
+
+
+/* this is for tier two dropdown in navigation - 7/20/2016 */
+$('.dropdown-content-sub').prev().mouseover(function(){
+        $(this).next().show();
+    });
+    $('.dropdown-content-sub').prev().mouseout(function(){
+        $(this).next().hide();
+    });
+    $('.dropdown-content-sub').mouseover(function(){
+        $(this).show();
+    });
+    $('.dropdown-content-sub').mouseout(function(){
+        $(this).hide();
+    });
 });
+
+
+$('.dropdown').mouseover(function(){
+        $(this).show();
+    });
+    $('.dropdown').mouseover(function(){
+        $(this).hide();
+    });
+    $('.dropdown-content').mouseover(function(){
+        $(this).show();
+    });
+    $('.dropdown-content').mouseout(function(){
+        $(this).hide();
+    });
 
 
 
