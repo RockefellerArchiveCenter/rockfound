@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-    #parse ($init)<!-- All velocity variable are declared in init.vm file. This is initialisation of variables.-->
-                    <!-- we have another file called inti_custom.vm for declare our own velocity related variables.-->
+    #parse ($init)
+
 
 <html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
 
@@ -12,6 +12,7 @@
     <meta content="initial-scale=1.0, width=device-width" name="viewport" />
     <link rel="shortcut icon" href="$images_folder/favicon.png">
     <link rel="apple-touch-icon" href="$images_folder/apple-touch-icon.png">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
      <script type="text/javascript" src="$javascript_folder/scripts.js"></script>
      <script type="text/javascript" src="$javascript_folder/custom.js"></script>
@@ -116,8 +117,7 @@
     </header>
 </div>
 
-<div id="content" class = "container-fluid">  
-    <nav id="breadcrumbs" class = "span12 offset1" >#breadcrumbs()</nav>
+<div id="content" class = "container-fluid">
 
     #if ($selectable)
         $theme.include($content_include)
@@ -135,15 +135,15 @@
         <div class="row-fluid">
             <div class="col-lg-6">
                 <p><span class="copyright">This project was generously funded by the&nbsp;<a title="rockefellerfoundation.org" href="http://www.rockefellerfoundation.org/" target="_blank">Rockefeller Foundation</a>.</span></p>
-                <p><span class="copyright">Copyright &copy; <a title="Rockefeller Archive Center" href="http://rockarch.org" target="_blank">The Rockefeller Archive Center</a>. All rights reserved.<br /></span></p>  </div>
+                <p><span class="copyright">Copyright © <a title="Rockefeller Archive Center" href="http://rockarch.org" target="_blank">The Rockefeller Archive Center</a>. All rights reserved.<br></span></p>
+            </div>
             <div class="col-lg-6">
-                <a href="http://www.rockarch.org/">
-                    <img src="$images_folder/footer_logo2.jpg" class="logo" alt="footer logo" />
-                </a>
+                <a href="http://www.rockarch.org/"> <img src="http://localhost:8080/rockefeller-theme/images/footer_logo2.jpg" class="logo" alt="footer logo"> </a>
             </div>
         </div>
     </div>
 </footer>
+
 
     $theme.include($body_bottom_include)
 
