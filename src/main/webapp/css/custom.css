@@ -769,7 +769,7 @@ hgroup h2.lead {
 footer {
     background-color: #2C2D2D;
     color: #ccc;
-    padding: 17px 0;
+    padding: 19px 0;
     border-top: solid 1px #555;
 
 
@@ -783,7 +783,7 @@ footer .logo {
     float: right;
     position:relative;
     right:190px;
-    top:-65px;
+    top:-67px;
 }
 
 
