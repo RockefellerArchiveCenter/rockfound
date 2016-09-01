@@ -133,7 +133,7 @@ a {
                 li {
                     float: left;
                     height: 100%;
-                    z-index:1000;
+                    z-index:5;
                             a{
                                     display: block;
                                     margin: 0;
