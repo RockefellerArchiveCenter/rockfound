@@ -54,6 +54,7 @@
     #end
 
 <div class="container-fluid" id="wrapper">
+
     <header id="header-full-top" class="header-full">
 
         <div class="top-bar hidden-xs" id = "header-top">
@@ -61,6 +62,7 @@
                 <ul class="topbar-nav list-unstyled list-inline pull-left">
                     <li>
                         <div class="header-full-title">
+
                             <h1 class="animated fadeInRight">
                                 <a href="http://localhost:8080/" ><span class='white'>100 Years:</span> <span class='red'>the <strong>Rockefeller</strong> Foundation</span></a>
                             </h1>
@@ -82,14 +84,14 @@
                 </ul>
             </div>
         </div>
-        <div class = "row-fluid hidden-desktop">
-            <div id = "page-top-bar" class = "span12">
-                <div id="nav-trigger" class = "pull-right">
-                    <span>Menu</span>
-                </div>
-            </div>
-            #if ($has_navigation || $is_signed_in)
-                <nav id = "nav-mobile">
+                <div class = "row-fluid hidden-desktop">
+                    <div id = "page-top-bar" class = "span12">
+                            <div id="nav-trigger" class = "pull-right">
+                            <span>Menu</span>
+                            </div>
+                    </div>
+                        #if ($has_navigation || $is_signed_in)
+                        <nav id = "nav-mobile">
                     <ul class = "span6 offset6 pull-right mobile-nav-menu" id = "mobile-nav">
                         #foreach ($nav_item in $nav_items)
                             <li class = "mobile-nav-child span12"><a aria-labelledby="layout_$nav_item.getLayoutId()"  href="$nav_item.getURL()" >$nav_item.getName() </a></li>
@@ -115,22 +117,25 @@
             </div>
         </div>
     </header>
-</div>
 
 <div id="content" class = "container-fluid">
-
-    #if ($selectable)
-        $theme.include($content_include)
-    #else
+		<div class="container">
+			#if ($selectable)
+			$theme.include($content_include)
+			#else
         $portletDisplay.recycle()
 
         $portletDisplay.setTitle($the_title)
 
         $theme.wrapPortlet("portlet.vm", $content_include)
-    #end
+		#end
+		</div>
+	</div>
 </div>
 
+
 <footer>
+     <div class="container">
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-lg-6">
@@ -142,6 +147,7 @@
             </div>
         </div>
     </div>
+</div>
 </footer>
 
 

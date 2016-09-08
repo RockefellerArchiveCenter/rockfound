@@ -178,26 +178,26 @@ a {
 }
 
 /* defining the bootstrap things that bootstrap 3 has but 2 does not */
-@media (min-width: 1200px) {
-    #content {
-        width: 1170px;
-
-    }
-    aui .row {
-        margin-left: -40px;
-        margin-right: -26px;
-    }
-
+@media (min-width: 1200px){
+.container {
+    width: 1170px;
 }
-@media (min-width: 992px) {
-    #content {
-        width: 970px;
-    }
+}
+@media (min-width: 992px){
+.container {
+    width: 970px;
+}
 }
 @media (min-width: 768px){
-    #content {
-        width: 750px;
-    }
+.container {
+    width: 750px;
+}
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -218,7 +218,7 @@ body {
 
 #content{
     margin:auto;
-    width:75%
+    width:auto;
 
 }
 
@@ -771,20 +771,17 @@ footer {
     color: #ccc;
     padding: 19px 0;
     border-top: solid 1px #555;
-
-
 }
-
-  footer .col-lg-6{
-    padding-left:175px;
+  footer  .col-lg-6{
+    padding-left:0px !important;
     }
 
-footer .logo {
-    float: right;
-    position:relative;
-    right:190px;
-    top:-67px;
-}
+footer  .logo {
+       float: right;
+       position:relative;
+       right:0px !important;
+       top:-67px;
+        }
 
 
 /*Admin styles*/
