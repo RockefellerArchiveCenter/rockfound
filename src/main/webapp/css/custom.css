@@ -869,6 +869,14 @@ nav#admin-bar li {
     background: #333;
     background: rgba(0,0,0,0.75);
 }
+
+.aui .carousel-item {
+     border-radius: 0px !important;
+    opacity: 0;
+}
+
+
+
 .carousel menu {
     background: #000;
     bottom: 6px;
