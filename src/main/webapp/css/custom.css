@@ -42,7 +42,7 @@
 #page-top-bar {
     background-color: #f8f8f8;
     margin: 0;
-    height: 50px;
+    height: auto;
 }
 
 #nav-menu {
@@ -311,6 +311,8 @@ body {
     background-color: #fff;
     border: 1px solid #ddd;
 }
+
+
 
 .landing h3, .landing h4, .landing .years {
     color: #212121;
