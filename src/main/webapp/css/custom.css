@@ -943,3 +943,27 @@ nav#admin-bar li {
     font-size: 14px;
     line-height: 1.8em;
 }
+
+/*digital Library */
+
+.insider-description {
+    margin-top: 10px;
+    line-height: 1.6em;
+    padding: 15px;
+}
+
+.sidebar-histories h3 {
+    font-family: "Playfair Display",serif;
+    padding-left: 20px;
+}
+
+.portlet-journal-content-search
+{
+
+}
+
+.library-options {
+    margin-bottom: 25px;
+    display: -webkit-inline-box;
+    margin-left: 45px;
+}
