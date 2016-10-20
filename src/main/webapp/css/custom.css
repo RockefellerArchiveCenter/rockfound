@@ -983,11 +983,10 @@ nav#admin-bar li {
 }
 
 .news-details{
-h3{
+    h3{
     color: #790d22 !important;
     font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif;
-}
-
+    }
 }
 
 .list-news-image{
